@@ -70,91 +70,65 @@ let profic = { "br" : [199, 1939, 66988, 353464, 331851, 670072, 537652, 279558,
 "df" : [1, 40, 1228, 6738, 6134, 13940, 11708, 5751, 4937, 3558]
 }
 
-/* Cria objeto com a distribuição das notas da redação do ENEM do país e por estado desgregadas por sexo */
-let sexo = {"br" : {"fem":[87, 838, 29373, 191679, 197239, 407122, 328958, 177821, 164863, 125603, 20],
-"masc":[112, 1101, 37615, 161785, 134612, 262950, 208694, 101737, 84977, 57742, 8]
-},
-"ro" : {"fem":[2, 13, 402, 2237, 2337, 4185, 2927, 1245, 1032, 598, 0],
- "masc":[2, 11, 470, 1717, 1410, 2.413, 1500, 638, 490, 287, 0]
-},
-"ac" : {"fem":[0, 9, 262, 1769, 1794, 3491, 2202, 864, 634, 497, 0],
- "masc":[2, 9, 427, 1480, 1228, 2090, 1372, 554, 384, 265, 0]
-},
-"am" : {"fem":[2, 9, 472, 3819, 3584, 10748, 6066, 2081, 1425, 726, 1],
- "masc":[4, 18, 464, 2659, 2904, 7385, 4296, 1321, 874, 367, 0]
-},
-"rr" : {"fem":[1, 4, 97, 591, 679, 1188, 782, 324, 260, 178, 0],
- "masc":[0, 4, 134, 513, 388, 673, 403, 166, 138, 80, 0]    
-},
-"pa" : {"fem":[6, 61, 2088, 12800, 14236, 27487, 18685, 8655, 7258, 5593, 2],
- "masc":[9, 71, 2515, 10369, 8832, 16113, 11363, 5108, 4250, 3038, 0]
-},
-"ap" : {"fem":[7, 241, 1737, 1803, 3783, 2387, 860, 651, 439, 0],
- "masc":[1, 5, 314, 1541, 1295, 2466, 1498, 592, 396, 258, 0]
-},
-"to" : {"fem":[3, 15, 366, 2450, 2461, 4481, 2996, 1417, 1255, 854, 0],
- "masc":[2, 21, 522, 1852, 1496, 2528, 1588, 713, 618, 438, 0]
-},
-"ma" : {"fem":[5, 61, 1669, 9957, 11119, 20577, 13288, 6023, 4886, 3677, 1],
- "masc":[7, 51, 1911, 8111, 6731, 11745, 8076, 3443, 2897, 2187, 0]
-},
-"pi" : {"fem":[5, 41, 970, 5499, 5767, 10492, 7658, 3847, 3809, 3497, 0],
- "masc":[4, 46, 1223, 4526, 3599, 6159, 4649, 2341, 2154, 1833, 0]
-},
-"ce" : {"fem":[22, 109, 1909, 11101, 11420, 21416, 19573, 10673, 9920, 7907, 1],
- "masc":[21, 155, 2779, 10437, 8345, 15329, 13640, 7160, 6113, 4546, 1]
-},
-"rn" : {"fem":[0, 28, 744, 4552, 4753, 9867, 7958, 4212, 3907, 3206, 0],
- "masc":[4, 22, 937, 4.193, 3.289, 6997, 5727, 2910, 2347, 1784, 1]
-},
-"pb" : {"fem":[5, 22, 988, 6433, 6342, 12703, 10495, 5457, 4994, 4095, 2],
- "masc":[5, 42, 1407, 6071, 4536, 8773, 6998, 3462, 2948, 2181, 0]
-},
-"pe" : {"fem":[4, 52, 1870, 11246, 12206, 22862, 18259, 9960, 9289, 6823, 0],
- "masc":[11, 88, 2478, 9785, 8472, 15213, 11912, 5687, 4777, 3250, 1]
-},
-"al" : {"fem":[3, 21, 683, 4128, 4353, 8422, 6436, 3180, 2969, 2327, 1],
- "masc":[4,26, 780, 3499, 2831, 5426, 4143, 1780, 1448, 1041, 1]
-},
-"se" : {"fem":[2, 18, 560, 3191, 3312, 6150, 5174, 2903, 2909, 2723, 0],
- "masc":[2, 12, 572, 2515, 2021, 3914, 3354, 1780, 1704, 1329, 1]
-},
-"ba" : {"fem":[8, 125, 3433, 17860, 18603, 35045, 26224, 13379, 11862, 8578, 0],
- "masc":[11, 128, 3729, 12952, 10378, 19211, 14915, 7148, 5658, 3655, 2]
-},
-"mg" : {"fem":[3, 41, 2481, 17802, 17244, 35554, 32365, 19280, 21140, 19719, 1],
- "masc":[6, 78, 3218, 14036, 11434, 22371, 20151, 11077, 10766, 8187, 0]
-},
-"es" : {"fem":[2, 14, 542, 3468, 3144, 6713, 6097, 3285, 3151, 2928, 1],
- "masc":[1, 26, 725, 2870, 2219, 4404, 3860, 1892, 1769, 1300, 0]
-},
-"rj" : {"fem":[5, 33, 1656, 10808, 11576, 25385, 22181, 12902, 12892, 11245, 6],
- "masc":[1, 36, 1894, 9144, 8311, 17380, 14969, 7891, 6503, 4649, 1]
-},
-"sp" : {"fem":[2, 51, 2900, 23729, 24161, 57151, 52851, 32436, 29038, 17603, 2],
- "masc":[5, 73, 4211, 22278, 19304, 41323, 35289, 18092, 14109, 7591, 0]
-},
-"pr" : {"fem":[1, 12, 881, 7462, 7513, 17924, 14965, 8115, 6661, 3869, 0],
- "masc":[2, 28, 1358, 6822, 5899, 11978, 9221, 4097, 2976, 1556, 0]
-},
-"sc" : {"fem":[1, 4, 400, 3834, 3386, 8149, 7667, 4265, 3960, 2356, 0],
- "masc":[1, 6, 625, 3385, 2540, 5410, 4357, 2049, 1609, 940, 0]
-},
-"rs" : {"fem":[3, 13, 947, 8483, 7652, 18590, 15209, 8276, 7519, 5568, 0],
- "masc":[0, 29, 1358, 7252, 5363, 11968, 8842, 4041, 3256, 2236, 0]
-},
-"ms" : {"fem":[0, 12, 446, 2793, 2943, 5615, 3837, 1994, 1813, 1182, 0],
- "masc":[0, 13, 582, 2420 , 2012, 3453, 2416, 1087, 894, 520, 0]
-},
-"mt" : {"fem":[1, 14, 625, 3552, 3792, 6722, 4904, 2398, 2138, 1628, 0],
- "masc":[2, 22, 784, 2803, 2308, 3973, 2875, 1251, 1097, 720, 0]
-},
-"go" : {"fem":[1, 28, 1167, 6594, 7439, 14155, 10713, 6149, 6161, 5264, 0],
- "masc":[4, 62, 1544, 5601, 4953, 8582, 6631, 3347, 3195, 2469, 0]
-},
-"df" : {"fem":[0, 21, 574, 3784, 3620, 8267, 7059, 3641, 3330, 2523, 2],
- "masc":[1, 19, 654, 2954, 2514, 5673, 4649, 2110, 1607, 1035, 0]
+let fem = { "br" : [87, 838, 29373, 191679, 197239, 407122, 328958, 177821, 164863, 125603, 20],
+"ro" : [2, 13, 402, 2237, 2337, 4185, 2927, 1245, 1032, 598, 0],
+"ac" : [0, 9, 262, 1769, 1794, 3491, 2202, 864, 634, 497, 0],
+"am" : [2, 9, 472, 3819, 3584, 10748, 6066, 2081, 1425, 726, 1],
+"rr" : [1, 4, 97, 591, 679, 1188, 782, 324, 260, 178, 0],
+"pa" : [6, 61, 2088, 12800, 14236, 27487, 18685, 8655, 7258, 5593, 2],
+"ap" : [7, 241, 1737, 1803, 3783, 2387, 860, 651, 439, 0],
+"to" : [3, 15, 366, 2450, 2461, 4481, 2996, 1417, 1255, 854, 0],
+"ma" : [5, 61, 1669, 9957, 11119, 20577, 13288, 6023, 4886, 3677, 1],
+"pi" : [5, 41, 970, 5499, 5767, 10492, 7658, 3847, 3809, 3497, 0],
+"ce" : [22, 109, 1909, 11101, 11420, 21416, 19573, 10673, 9920, 7907, 1],
+"rn" : [0, 28, 744, 4552, 4753, 9867, 7958, 4212, 3907, 3206, 0],
+"pb" : [5, 22, 988, 6433, 6342, 12703, 10495, 5457, 4994, 4095, 2],
+"pe" : [4, 52, 1870, 11246, 12206, 22862, 18259, 9960, 9289, 6823, 0],
+"al" : [3, 21, 683, 4128, 4353, 8422, 6436, 3180, 2969, 2327, 1],
+"se" : [2, 18, 560, 3191, 3312, 6150, 5174, 2903, 2909, 2723, 0],
+"ba" : [8, 125, 3433, 17860, 18603, 35045, 26224, 13379, 11862, 8578, 0],
+"mg" : [3, 41, 2481, 17802, 17244, 35554, 32365, 19280, 21140, 19719, 1],
+"es" : [2, 14, 542, 3468, 3144, 6713, 6097, 3285, 3151, 2928, 1],
+"rj" : [5, 33, 1656, 10808, 11576, 25385, 22181, 12902, 12892, 11245, 6],
+"sp" : [2, 51, 2900, 23729, 24161, 57151, 52851, 32436, 29038, 17603, 2],
+"pr" : [1, 12, 881, 7462, 7513, 17924, 14965, 8115, 6661, 3869, 0],
+"sc" : [1, 4, 400, 3834, 3386, 8149, 7667, 4265, 3960, 2356, 0],
+"rs" : [3, 13, 947, 8483, 7652, 18590, 15209, 8276, 7519, 5568, 0],
+"ms" : [0, 12, 446, 2793, 2943, 5615, 3837, 1994, 1813, 1182, 0],
+"mt" : [1, 14, 625, 3552, 3792, 6722, 4904, 2398, 2138, 1628, 0],
+"go" : [1, 28, 1167, 6594, 7439, 14155, 10713, 6149, 6161, 5264, 0],
+"df" : [0, 21, 574, 3784, 3620, 8267, 7059, 3641, 3330, 2523, 2],
 }
+
+/* Cria objeto com a distribuição das notas da redação do ENEM do país e por estado desgregadas por sexo */
+let masc = {"br" : [112, 1101, 37615, 161785, 134612, 262950, 208694, 101737, 84977, 57742, 8],
+"ro" : [2, 11, 470, 1717, 1410, 2.413, 1500, 638, 490, 287, 0],
+"ac" : [2, 9, 427, 1480, 1228, 2090, 1372, 554, 384, 265, 0],
+"am" : [4, 18, 464, 2659, 2904, 7385, 4296, 1321, 874, 367, 0],
+"rr" : [0, 4, 134, 513, 388, 673, 403, 166, 138, 80, 0],  
+"pa" : [9, 71, 2515, 10369, 8832, 16113, 11363, 5108, 4250, 3038, 0],
+"ap" : [1, 5, 314, 1541, 1295, 2466, 1498, 592, 396, 258, 0],
+"to" : [2, 21, 522, 1852, 1496, 2528, 1588, 713, 618, 438, 0],
+"ma" : [7, 51, 1911, 8111, 6731, 11745, 8076, 3443, 2897, 2187, 0],
+"pi" : [4, 46, 1223, 4526, 3599, 6159, 4649, 2341, 2154, 1833, 0],
+"ce" : [21, 155, 2779, 10437, 8345, 15329, 13640, 7160, 6113, 4546, 1],
+"rn" : [4, 22, 937, 4.193, 3.289, 6997, 5727, 2910, 2347, 1784, 1],
+"pb" : [5, 42, 1407, 6071, 4536, 8773, 6998, 3462, 2948, 2181, 0],
+"pe" : [11, 88, 2478, 9785, 8472, 15213, 11912, 5687, 4777, 3250, 1],
+"al" : [4,26, 780, 3499, 2831, 5426, 4143, 1780, 1448, 1041, 1],
+"se" : [2, 12, 572, 2515, 2021, 3914, 3354, 1780, 1704, 1329, 1],
+"ba" : [11, 128, 3729, 12952, 10378, 19211, 14915, 7148, 5658, 3655, 2],
+"mg" : [6, 78, 3218, 14036, 11434, 22371, 20151, 11077, 10766, 8187, 0],
+"es" : [1, 26, 725, 2870, 2219, 4404, 3860, 1892, 1769, 1300, 0],
+"rj" : [1, 36, 1894, 9144, 8311, 17380, 14969, 7891, 6503, 4649, 1],
+"sp" : [5, 73, 4211, 22278, 19304, 41323, 35289, 18092, 14109, 7591, 0],
+"pr" : [2, 28, 1358, 6822, 5899, 11978, 9221, 4097, 2976, 1556, 0],
+"sc" : [1, 6, 625, 3385, 2540, 5410, 4357, 2049, 1609, 940, 0],
+"rs" : [0, 29, 1358, 7252, 5363, 11968, 8842, 4041, 3256, 2236, 0],
+"ms" : [0, 13, 582, 2420 , 2012, 3453, 2416, 1087, 894, 520, 0],
+"mt" : [2, 22, 784, 2803, 2308, 3973, 2875, 1251, 1097, 720, 0],
+"go" : [4, 62, 1544, 5601, 4953, 8582, 6631, 3347, 3195, 2469, 0],
+"df" : [1, 19, 654, 2954, 2514, 5673, 4649, 2110, 1607, 1035, 0]
 }
 
 /* Cria objeto com a distribuição das notas da redação do ENEM do país e por estado desgregadas por raça */
@@ -356,7 +330,6 @@ let raca = {"br" : {"nd":[4, 52, 1411, 6644, 6350, 12294, 10187, 5468, 4957, 398
 }
 }
 
-
 /* Cria a função par aleatorizar as frases mostradas no HTML */
 function aleat(fatos){
   let max = fatos.length
@@ -397,10 +370,9 @@ let mostrarProfic = document.querySelector('.barras > div')
 /* Cria função para pegar os valores da propriedade javascript e mostrá-los em um histograma na página HTML */
 function mostraProfic(){
   let localProfic = seletorProfic.value
-  let numeros = profic [localProfic]
-  let graphProfic = document.querySelector('.barras > div')
-  graphProfic.textContent = numeros
-
+  let listaProfic = profic [localProfic]
+  let graphProfic = document.querySelectorAll('.barras > div')
+  
   let indice = 0
 
   /* Cria divisor para padronizar histograma */
@@ -412,7 +384,7 @@ function mostraProfic(){
   }
 
   /* Loop para alterar o tamanho das barras de acordo com o local escolhido */
-  for (let numero of numeros){
+  for (let numero of listaProfic){
 
     /* Cria variável para criar a altura padronizada das barras no histograma */
     let altura = numero / divisor
@@ -426,11 +398,96 @@ function mostraProfic(){
     graphProfic[indice].style.height = altura + 'px'
         
     /* Muda o texto do HTML para inserir valores dentro das barras do histograma */
-    graphProfic[indice].textContent = numero
+    graphProfic[indice].innerHTML = '<span>' + numero + '<span>'
     
     indice++
   }
 }
 
+/* Cria o evento que escuta a troca de estado no select */
 seletorProfic.addEventListener('change', mostraProfic)
 
+let seletorFem = document.getElementById('sexoPart')
+let mostrarFem = document.querySelectorAll('.barrasFem > div')
+
+function mostraFem(){
+
+  let localFem = seletorFem.value
+  let listaFem = fem[localFem]
+  let graphFem = document.querySelectorAll('.barrasFem > div')
+
+  let indice = 0
+
+  /* Cria divisor para padronizar histograma */
+  let divisor = 3000
+
+  /* Cria condição para que as barras dos estados não fiquem pequenas no histograma */
+  if (localFem != 'br'){
+    divisor = 400
+  }
+
+  /* Loop para alterar o tamanho das barras de acordo com o local escolhido */
+  for (let numero of listaFem){
+
+    /* Cria variável para criar a altura padronizada das barras no histograma */
+    let altura = numero / divisor
+
+    /* Condição para que as barras do histograma tenham um tamanho mínimo */
+    if(altura < 1){
+      altura = 4
+    }
+
+    /* Muda o CSS para que as barras mudem de tamanho */
+    graphFem[indice].style.height = altura + 'px'
+        
+    /* Muda o texto do HTML para inserir valores dentro das barras do histograma */
+    graphFem[indice].innerHTML = '<span>' + numero + '<span>'
+    
+    indice++
+  }
+}
+
+seletorFem.addEventListener('change', mostraFem)
+
+
+let seletorMasc = document.getElementById('sexoPart')
+let mostrarMasc = document.querySelectorAll('.barrasMasc > div')
+
+function mostraMasc(){
+
+  let localMasc = seletorMasc.value
+  let listaMasc = masc[localMasc]
+  let graphMasc = document.querySelectorAll('.barrasMasc > div')
+
+  let indice = 0
+
+  /* Cria divisor para padronizar histograma */
+  let divisor = 3000
+
+  /* Cria condição para que as barras dos estados não fiquem pequenas no histograma */
+  if (localMasc != 'br'){
+    divisor = 400
+  }
+
+  /* Loop para alterar o tamanho das barras de acordo com o local escolhido */
+  for (let numero of listaMasc){
+
+    /* Cria variável para criar a altura padronizada das barras no histograma */
+    let altura = numero / divisor
+
+    /* Condição para que as barras do histograma tenham um tamanho mínimo */
+    if(altura < 1){
+      altura = 4
+    }
+
+    /* Muda o CSS para que as barras mudem de tamanho */
+    graphMasc[indice].style.height = altura + 'px'
+        
+    /* Muda o texto do HTML para inserir valores dentro das barras do histograma */
+    graphMasc[indice].innerHTML = '<span>' + numero + '<span>'
+    
+    indice++
+  }
+}
+
+seletorMasc.addEventListener('change', mostraMasc)
