@@ -449,7 +449,6 @@ function mostraFem(){
 
 seletorFem.addEventListener('change', mostraFem)
 
-
 let seletorMasc = document.getElementById('sexoPart')
 let mostrarMasc = document.querySelectorAll('.barrasMasc > div')
 

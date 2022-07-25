@@ -168,14 +168,20 @@ li{
     transform: translateY(-100%)
 }
 
-
 .rotulo{
     margin:auto;
     display: flex;
     flex-direction: row;
     align-items:center;
     font-size:medium;
-    max-width: 50vw;
+}
+
+.rotulo > div {
+    border: 1px solid;
+    border-radius: 1px;
+    margin: auto;
+    font-size: small ;
+    background-color: #4F584D;
 }
 
 a{
